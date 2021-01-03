@@ -1,10 +1,7 @@
-﻿Feature: Scenarios
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: Scenarios to perform operations on the Trademe website
 
-@mytag
-Scenario: Add two numbers
+@chrome
+Scenario: Login to Trademe & shortlist properties
 	Given the first number is 50
 	And the second number is 70
 	When the two numbers are added
