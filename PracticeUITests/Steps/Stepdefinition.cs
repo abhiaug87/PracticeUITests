@@ -7,6 +7,7 @@ using PracticeUITests.PageObjects;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium.Interactions;
 using System;
+using PracticeUITests.Utilities;
 using Newtonsoft.Json;
 using System.IO;
 using System.Data;
@@ -21,6 +22,17 @@ namespace PracticeUITests.Steps
         Pageobjects po = new Pageobjects(Driver);
         WebDriverWait wait = new WebDriverWait(Driver, new TimeSpan(0, 0, 5));
         JSON read = new JSON();
+
+        [Given(@"I have logged into the portal")]
+        public void GivenIHaveLoggedIntoThePortal()
+        {
+            Driver.Navigate().GoToUrl(CommonConstants.ApplicationSettings.BaseUrl);
+            po.signin.Click();
+            po.username.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "username"));
+            po.password.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "password"));
+            po.login.Click();
+        }
+
 
     }
 }
