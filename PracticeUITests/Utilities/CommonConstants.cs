@@ -8,7 +8,7 @@ namespace PracticeUITests.Utilities
         public static class DriverSettings
         {
             public static string filepath = Path.GetFileNameWithoutExtension("chromedriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate
-            //public static string BinaryLocationChrome = @"C:\Users\abhishek.kulkarni\AppData\Local\Temp";
+            //public static string BinaryLocationChrome = @"C:\Users\abhishek.kulkarni\AppData\Local\Temp\chromedriver";
             public static string BinaryLocationChrome = filepath;
 
             public static string ChromeBrowser = "Chrome";
