@@ -12,6 +12,7 @@ namespace PracticeUITests.Utilities
             public static string BinaryLocationChrome = filepath;
 
             public static string ChromeBrowser = "Chrome";
+            public static string HeadlessBrowser = "Headless";
             public static int DefaultWaitTime = 3000;
         }
 

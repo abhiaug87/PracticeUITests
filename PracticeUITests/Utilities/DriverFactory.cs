@@ -16,11 +16,13 @@ namespace PracticeUITests.Utilities
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--no-sandbox");
             IWebDriver driver = null;
-            if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
+            if (browser.Equals(CommonConstants.DriverSettings.HeadlessBrowser))
             {
-               // driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
-                 driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
-
+                driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
+            }
+           else if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
+            {
+                driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
             }
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(CommonConstants.DriverSettings.DefaultWaitTime);

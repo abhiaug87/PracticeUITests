@@ -25,6 +25,10 @@ namespace PracticeUITests.Utilities
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.ChromeBrowser);
             }
+           else if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("Headless"))
+            {
+                Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.HeadlessBrowser);
+            }
         }
 
         [AfterScenario]
