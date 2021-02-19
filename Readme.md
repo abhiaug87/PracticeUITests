@@ -1,3 +1,5 @@
+1. Framework Description:
+
 This is a page object model framework created using Selenium, Specflow & C#. The framework is seggregated into various parts for better understandablibity & easier maintainability.
 
 Scenarios Folder:
