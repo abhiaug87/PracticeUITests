@@ -10,11 +10,13 @@ namespace PracticeUITests.Utilities
         public static IWebDriver InitiateWebDriver(string browser)
         {
             var chromeOptions = new ChromeOptions();
-            chromeOptions.AddArguments("--window-size=1920,1080");
-            chromeOptions.AddArguments("--allow-insecure-localhost");
-            chromeOptions.AddArguments("--headless");
-            chromeOptions.AddArguments("--disable-gpu");
-            chromeOptions.AddArguments("--no-sandbox");
+            chromeOptions.AddArguments(
+            "--window-size=1920,1080",
+            "--allow-insecure-localhost",
+            "--headless",
+            "--disable-gpu",
+            "--no-sandbox"
+         );
             IWebDriver driver = null;
             if (browser.Equals(CommonConstants.DriverSettings.HeadlessBrowser))
             {
