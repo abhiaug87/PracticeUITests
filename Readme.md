@@ -16,12 +16,12 @@ This contains a class file which has logic for allowing the framework to read da
 
 Utilities Folder:
 This contains the following class files.
-i. Common Constants - This contains code for location of the browser drivers, names of the tags that are used in the SpecFlow file & base url address
-ii. Hooks - This contains BeforeScenario & AfterScenrio functions that direct the test to perform actions before it starts & after it ends. 
+1. Common Constants - This contains code for location of the browser drivers, names of the tags that are used in the SpecFlow file & base url address 
+2. Hooks - This contains BeforeScenario & AfterScenrio functions that direct the test to perform actions before it starts & after it ends. 
 Before starting the test checks whether it has to run the test has to run on a real browser or in headless mode depending on the tag mentioned on top of the scenario in the 
 SpecFlow file. 
 After the test is over, the framework captures images of any failed tests & then disposes the browser.
-iii. DriverFactory - This contains the logic for running tests in real browser or headless mode. It also contains logic for driver timeout & maximize while running tests in real browser mode.
+3. DriverFactory - This contains the logic for running tests in real browser or headless mode. It also contains logic for driver timeout & maximize while running tests in real browser mode.
 
 B. Running Tests:
 
