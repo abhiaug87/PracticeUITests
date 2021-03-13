@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
-
+using SeleniumExtras.PageObjects;
 
 namespace PracticeUITests.PageObjects
 {
@@ -8,7 +7,7 @@ namespace PracticeUITests.PageObjects
     {
         public Pageobjects(IWebDriver driver)
         {
-            SeleniumExtras.PageObjects.PageFactory.InitElements(driver, this);
+           PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.XPath, Using = "//*[@id='fullHeader']/nav/div[1]/wnz-quick-nav/nav/ul/li[5]/a")]
