@@ -32,7 +32,7 @@ namespace PracticeUITests.Steps
             po.username.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "username"));
             po.password.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "password"));
             po.login.Click();
-            Sleep(3);
+            Sleep(2);
         }
 
         [Given(@"I choose to order items from the website")]
@@ -51,7 +51,6 @@ namespace PracticeUITests.Steps
         public void WhenIPlaceAnOrder()
         {
             po.search.SendKeys(Keys.PageDown);
-            //po.product1.Click();
             Assert.IsTrue(po.trolley.Displayed, "Text field is not displayed");
             Assert.IsTrue(po.trolley.Text.Contains(read.jsonReader("../PracticeUITests/Data/TestData.json", "TrolleyText")));
             po.trolley.Click();

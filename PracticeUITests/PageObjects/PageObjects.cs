@@ -31,7 +31,7 @@ namespace PracticeUITests.PageObjects
         [FindsBy(How = How.CssSelector, Using = "button#searchIcon")]
         public IWebElement searchicon;
 
-        [FindsBy(How = How.LinkText, Using = "Add to trolley")]
+        [FindsBy(How = How.XPath, Using = "/html/body/wnz-content/div[2]/wnz-search/div[2]/main/product-grid/product-stamp-grid[1]/cdx-card/footer/product-add-to-trolley/button")]
         public IWebElement trolley;
     }
 }
