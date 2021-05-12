@@ -7,18 +7,24 @@ namespace PracticeUITests.Utilities
     {
         public static class DriverSettings
         {
-            public static string filepath = Path.GetFileNameWithoutExtension("chromedriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
-            //public static string BinaryLocationChrome = @"C:\Users\abhishek.kulkarni\AppData\Local\Temp\chromedriver";
-            public static string BinaryLocationChrome = filepath;
+            // running tests on chrome
+            public static string filepathchrome = Path.GetFileNameWithoutExtension("chromedriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
+            public static string BinaryLocationChrome = filepathchrome;
+
+            // running tests on firefox
+            // public static string filepathff = Path.GetFileNameWithoutExtension("geckodriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
+            // public static string BinaryLocationFireFox = filepathff;
+            public static string BinaryLocationFireFox = @"C:\Users\abhishek.kulkarni\AppData\Local\Temp\chromedriver";
+
+            // running tests on edge
+            public static string filepathedge = Path.GetFileNameWithoutExtension("MicrosoftWebDriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
+            public static string BinaryLocationEdge = filepathedge;
 
             public static string ChromeBrowser = "Chrome";
+            public static string FireFoxBrowser = "FireFox";
+            public static string EdgeBrowser = "Edge";
             public static string HeadlessBrowser = "Headless";
             public static int DefaultWaitTime = 3000;
-        }
-
-        public class ApplicationSettings
-        {
-            public static string BaseUrl = "https://shop.countdown.co.nz/";
         }
     }
 }

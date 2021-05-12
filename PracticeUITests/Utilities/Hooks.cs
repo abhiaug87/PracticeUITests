@@ -25,7 +25,15 @@ namespace PracticeUITests.Utilities
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.ChromeBrowser);
             }
-           else if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("Headless"))
+            if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("FireFox"))
+            {
+                Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.FireFoxBrowser);
+            }
+            if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("Edge"))
+            {
+                Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.EdgeBrowser);
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Tags.Contains("Headless"))
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.HeadlessBrowser);
             }
@@ -43,6 +51,7 @@ namespace PracticeUITests.Utilities
             }
             Driver.Close();
             Driver.Quit();
+            Driver.Dispose();
         }
     }
 }

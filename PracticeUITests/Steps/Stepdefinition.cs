@@ -27,12 +27,11 @@ namespace PracticeUITests.Steps
         [Given(@"I have logged into the portal")]
         public void GivenIHaveLoggedIntoThePortal()
         {
-            Driver.Navigate().GoToUrl(CommonConstants.ApplicationSettings.BaseUrl);
-            po.signin.Click();
+            Driver.Navigate().GoToUrl(read.jsonReader("../PracticeUITests/Data/TestData.json", "url"));
+            //po.signin.Click();
             po.username.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "username"));
             po.password.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "password"));
             po.login.Click();
-            Sleep(2);
         }
 
         [Given(@"I choose to order items from the website")]

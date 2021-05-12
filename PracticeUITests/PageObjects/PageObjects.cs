@@ -13,10 +13,10 @@ namespace PracticeUITests.PageObjects
         [FindsBy(How = How.XPath, Using = "//*[@id='fullHeader']/nav/div[1]/wnz-quick-nav/nav/ul/li[5]/a")]
         public IWebElement signin;
 
-        [FindsBy(How = How.CssSelector, Using = "input#loginID.ng-star-inserted")]
+        [FindsBy(How = How.Id, Using = "loginID")]
         public IWebElement username;
 
-        [FindsBy(How = How.CssSelector, Using = "input#password")]
+        [FindsBy(How = How.Id, Using = "password")]
         public IWebElement password;
 
         [FindsBy(How = How.CssSelector, Using = "button.gigya-input-submit")]

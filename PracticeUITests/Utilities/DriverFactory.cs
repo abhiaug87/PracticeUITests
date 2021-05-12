@@ -1,7 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
 
 namespace PracticeUITests.Utilities
 {
@@ -22,9 +23,17 @@ namespace PracticeUITests.Utilities
             {
                 driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome, chromeOptions);
             }
-           else if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
+            else if (browser.Equals(CommonConstants.DriverSettings.ChromeBrowser))
             {
                 driver = new ChromeDriver(CommonConstants.DriverSettings.BinaryLocationChrome);
+            }
+            else if (browser.Equals(CommonConstants.DriverSettings.FireFoxBrowser))
+            {
+                driver = new FirefoxDriver(CommonConstants.DriverSettings.BinaryLocationFireFox);
+            }
+            else if (browser.Equals(CommonConstants.DriverSettings.EdgeBrowser))
+            {
+                driver = new EdgeDriver(CommonConstants.DriverSettings.BinaryLocationEdge);
             }
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(CommonConstants.DriverSettings.DefaultWaitTime);
