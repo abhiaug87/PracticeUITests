@@ -3,7 +3,7 @@ A. Framework Description:
 This is a page object model framework created using Selenium, Specflow & C#. The framework is seggregated into various parts for better understandablibity & easier maintainability. This framework has the capability of running tests on real browsers & in headless mode. 
 
 Scenarios Folder:
-Conatains specflow file with the BDD user scenarios.
+Contains specflow file with the BDD user scenarios.
 
 Steps Folder:
 This contains the step definitions class file which has the logic for the user scenarios mentioned in the specflow file. This folder also has the base class whose properties are inherited in the step definitions section.
