@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\JSON.cs" />
+    <Compile Include="Encryption\Encryption.cs" />
     <Compile Include="PageObjects\Pageobjects.cs" />
     <Compile Include="Scenarios\Scenarios.feature.cs">
       <AutoGen>True</AutoGen>
