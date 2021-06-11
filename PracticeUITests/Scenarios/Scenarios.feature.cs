@@ -81,6 +81,10 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
  testRunner.Given("I have logged into the portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+    testRunner.And("I choose to order items from the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 7
+ testRunner.When("I place an order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

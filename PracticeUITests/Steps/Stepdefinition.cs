@@ -28,7 +28,6 @@ namespace PracticeUITests.Steps
         public void GivenIHaveLoggedIntoThePortal()
         {
             Driver.Navigate().GoToUrl(read.jsonReader("../PracticeUITests/Data/TestData.json", "url"));
-            //po.signin.Click();
             po.username.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "username"));
             po.password.SendKeys(read.jsonReader("../PracticeUITests/Data/TestData.json", "password"));
             po.login.Click();
