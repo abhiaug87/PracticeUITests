@@ -12,10 +12,9 @@ namespace PracticeUITests.Utilities
             public static string BinaryLocationChrome = filepathchrome;
 
             // running tests on firefox
-            // public static string filepathff = Path.GetFileNameWithoutExtension("geckodriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
-            // public static string BinaryLocationFireFox = filepathff;
-            public static string BinaryLocationFireFox = @"C:\Users\abhishek.kulkarni\AppData\Local\Temp\chromedriver";
-
+             public static string filepathff = Path.GetFileNameWithoutExtension("geckodriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
+             public static string BinaryLocationFireFox = filepathff;
+            
             // running tests on edge
             public static string filepathedge = Path.GetFileNameWithoutExtension("MicrosoftWebDriver.exe"); // Create a folder called "chromedriver" under "C:\Users\yourusername\AppData\Local\Temp" & add the chrome driver version supported by your browser in this folder for the web browser to initiate. Make sure you name it as chromedriver.exe
             public static string BinaryLocationEdge = filepathedge;
