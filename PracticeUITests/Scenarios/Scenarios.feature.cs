@@ -71,11 +71,11 @@ namespace PracticeUITests.Scenarios
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login to Countdown & purchase groceries")]
-        [NUnit.Framework.CategoryAttribute("Chrome")]
+        [NUnit.Framework.CategoryAttribute("Edge")]
         public virtual void LoginToCountdownPurchaseGroceries()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to Countdown & purchase groceries", null, new string[] {
-                        "Chrome"});
+                        "Edge"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

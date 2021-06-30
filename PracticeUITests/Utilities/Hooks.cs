@@ -11,12 +11,48 @@ using System.IO;
 using System.Diagnostics;
 using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
+using AventStack.ExtentReports;
 
 namespace PracticeUITests.Utilities
 {
     [Binding]
     public class Hooks : BaseClass
     {
+
+        private static ExtentTest featurename, scenario;
+        private static ExtentReports htmlreport;
+
+        [BeforeTestRun]
+        public static void InitializeReports()
+        {
+            var reports = new ExtentHtmlReporter(Path.Combine(NUnit.Framework.TestContext.CurrentContext.WorkDirectory + @"\\TestRunReport", "index.html"));
+            reports.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+            htmlreport = new ExtentReports();
+            htmlreport.AttachReporter(reports);
+
+        }
+
+        [AfterTestRun]
+        public static void PublishReports()
+        {
+            htmlreport.Flush();
+        }
+
+        [BeforeFeature]
+        public static void BeforeFeature()
+        {
+            featurename = htmlreport.CreateTest<Feature>(FeatureContext.Current.FeatureInfo.Title);
+
+        }
+
+        [AfterStep]
+        public static void AfterStep()
+        {
+            scenario.CreateNode<Given>(ScenarioStepContext.Current.StepInfo.Text);
+        }
+
         [BeforeScenario]
 
         public void BeforeScenario()
@@ -37,6 +73,7 @@ namespace PracticeUITests.Utilities
             {
                 Driver = DriverFactory.InitiateWebDriver(CommonConstants.DriverSettings.HeadlessBrowser);
             }
+            scenario = featurename.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
         }
 
         [AfterScenario]
